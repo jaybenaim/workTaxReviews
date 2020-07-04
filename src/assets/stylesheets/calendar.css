@@ -31,3 +31,7 @@
   padding: 2.5px;
   border-radius: 4px;
 }
+/* Month Label */
+.rbc-toolbar-label {
+  font-size: 3em;
+}
