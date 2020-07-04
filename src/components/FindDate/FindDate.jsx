@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { Form } from "react-bootstrap";
 import moment from "moment";
 
 const FindDate = () => {
@@ -28,14 +29,33 @@ const FindDate = () => {
     <div className="find-date-section" style={{ padding: "4%" }}>
       <div>Enter the date the client last worked</div>
       {/* Checkbox for 1st time that will change 14 to 28 days */}
-      <input type="date" onChange={(e) => handleChange(e.target.value)} />
+      <Form>
+        <Form.Group controlId="formBasicEmail">
+          <Form.Control
+            label="Date client last worked"
+            type="date"
+            onChange={(e) => handleChange(e.target.value)}
+          />
+        </Form.Group>
+
+        <Form.Group controlId="formBasicCheckbox">
+          <Form.Check
+            type="radio"
+            label="First time applying"
+            onChange={(e) => handleCheckbox(e.target.value)}
+          />
+        </Form.Group>
+        <Form.Group controlId="formBasicCheckbox2">
+          <Form.Check
+            type="radio"
+            label="Second time applying"
+            onChange={(e) => handleCheckbox(e.target.value)}
+          />
+        </Form.Group>
+      </Form>
+
       <br />
-      <label htmlFor="checkbox">First Time applying</label>{" "}
-      <input
-        type="checkbox"
-        value={checkboxValue}
-        onChange={(e) => handleCheckbox(e.target.value)}
-      />
+
       {firstTimeApplyingPeriod && (
         <div>
           Ask The customer if they have made less than $1000 since{" "}
