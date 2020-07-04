@@ -1,5 +1,5 @@
 {
-  "name": "Tax Reviews",
+  "name": "worktaxreviews",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -44,5 +44,6 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "homepage": "https://jaybenaim.github.io/workTaxReviews/"
 }
