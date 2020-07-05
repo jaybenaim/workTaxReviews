@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2f355b557c2ebd05a426f614fd82c0e4",
+    "revision": "0eaef6ac25262fc77bb3312c1b063978",
     "url": "/workTaxReviews/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/workTaxReviews/static/css/2.c7ed56f2.chunk.css"
   },
   {
-    "revision": "531cbbad5e892b20b300",
+    "revision": "3230615d1aa3ff75e300",
     "url": "/workTaxReviews/static/css/main.cab48b86.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/workTaxReviews/static/js/2.346841cb.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "531cbbad5e892b20b300",
-    "url": "/workTaxReviews/static/js/main.5b0b12b1.chunk.js"
+    "revision": "3230615d1aa3ff75e300",
+    "url": "/workTaxReviews/static/js/main.e1e80b44.chunk.js"
   },
   {
     "revision": "a9b5967e48fd0111d783",
