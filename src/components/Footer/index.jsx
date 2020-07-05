@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container-fluid">
         <div className="row justify-content-around">
           <div className="col-8 col-md-5">
-            <h5 className={styles.title}>react_starter_template</h5>
+            <h5 className={styles.title}>CERB TAX REVIEW HELPER</h5>
             <p className={styles.description}>
               This is placeholder text. Your web app description goes here.
             </p>
@@ -35,5 +35,5 @@ const Footer = () => {
       </div>
     </footer>
   );
-}
+};
 export default Footer;

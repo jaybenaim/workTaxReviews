@@ -10,7 +10,7 @@ const NavBar = () => {
       </div>
       <nav className="navbar navbar-expand-sm navbar-light border-bottom justify-content-between">
         <Link className="navbar-brand" to="/">
-          react_starter_template
+          CERB TAX REVIEW HELPER
         </Link>
         <div className="navbar-nav">
           <Link className="nav-item nav-link active" to="/">

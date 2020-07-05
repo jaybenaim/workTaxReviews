@@ -7,7 +7,8 @@ const FindDate = () => {
   const [firstTimeApplyingPeriod, setDaysBack] = useState();
   const [firstTimeApplying, toggleFirstTimeApplying] = useState(false);
   const [checkboxValue, setCheckboxValue] = useState(false);
-
+  const [radio1, setRadio1] = useState();
+  const [radio2, setRadio2] = useState();
   const handleChange = (dateValue, firstTime) => {
     setDate(dateValue);
 
@@ -19,7 +20,14 @@ const FindDate = () => {
     setDaysBack(new Date(firstTimeApplyPeriod));
   };
 
-  const handleCheckbox = (value) => {
+  const handleCheckbox = (e) => {
+    const { name, value } = e;
+    if (name === "radio1") {
+      setRadio1("active" ? "" : "active");
+    }
+    if (name === "radio2") {
+      setRadio2("active");
+    }
     setCheckboxValue(!checkboxValue);
     toggleFirstTimeApplying(!firstTimeApplying);
     handleChange(date, !firstTimeApplying);
@@ -38,18 +46,21 @@ const FindDate = () => {
           />
         </Form.Group>
 
-        <Form.Group controlId="formBasicCheckbox">
+        <Form.Group>
           <Form.Check
             type="radio"
             label="First time applying"
-            onChange={(e) => handleCheckbox(e.target.value)}
+            name="radio"
+            value={radio1}
+            onChange={(e) => handleCheckbox(e.target)}
           />
-        </Form.Group>
-        <Form.Group controlId="formBasicCheckbox2">
+
           <Form.Check
             type="radio"
-            label="Second time applying"
-            onChange={(e) => handleCheckbox(e.target.value)}
+            label="Client has previously applied for CERB"
+            name="radio"
+            value={radio2}
+            onChange={(e) => handleCheckbox(e.target)}
           />
         </Form.Group>
       </Form>
@@ -58,7 +69,7 @@ const FindDate = () => {
 
       {firstTimeApplyingPeriod && (
         <div>
-          Ask The customer if they have made less than $1000 since{" "}
+          Ask client: Have you made less than $1000 since{" "}
           {moment(firstTimeApplyingPeriod).format("MMMM Do YYYY")}
         </div>
       )}
