@@ -1,16 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Form } from "react-bootstrap";
 import moment from "moment";
+import PeriodToClaim from "../PeriodToClaim/PeriodToClaim";
 
 const FindDate = () => {
   const [date, setDate] = useState(new Date());
-  const [firstTimeApplyingPeriod, setDaysBack] = useState();
+  const [dateSetBack, setDaysBack] = useState();
+
+  const [dateSelected, toggleDateSelected] = useState(false);
   const [firstTimeApplying, toggleFirstTimeApplying] = useState(false);
   const [checkboxValue, setCheckboxValue] = useState(false);
   const [radio1, setRadio1] = useState();
   const [radio2, setRadio2] = useState();
+
+  useEffect(() => {
+    let daysBack = new Date(date.setDate(date.getDate() - 26));
+    setDaysBack(daysBack);
+  }, []);
+
   const handleChange = (dateValue, firstTime) => {
     setDate(dateValue);
+    toggleDateSelected(!dateSelected);
 
     let dateV = new Date(dateValue);
     let amountOfDays = firstTime ? 14 : 28;
@@ -21,7 +31,7 @@ const FindDate = () => {
   };
 
   const handleCheckbox = (e) => {
-    const { name, value } = e;
+    const { name } = e;
     if (name === "radio1") {
       setRadio1("active" ? "" : "active");
     }
@@ -60,6 +70,7 @@ const FindDate = () => {
             label="Client has previously applied for CERB"
             name="radio"
             value={radio2}
+            defaultChecked
             onChange={(e) => handleCheckbox(e.target)}
           />
         </Form.Group>
@@ -67,11 +78,19 @@ const FindDate = () => {
 
       <br />
 
-      {firstTimeApplyingPeriod && (
+      {dateSetBack && (
         <div>
           Ask client: Have you made less than $1000 since{" "}
-          {moment(firstTimeApplyingPeriod).format("MMMM Do YYYY")}
+          {moment(dateSetBack).format("MMMM Do YYYY")}
         </div>
+      )}
+
+      {date && (
+        <PeriodToClaim
+          date={date}
+          dateSetBack={dateSetBack}
+          firstTimeApplying={firstTimeApplying}
+        />
       )}
     </div>
   );
