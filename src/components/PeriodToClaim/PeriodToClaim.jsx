@@ -33,19 +33,18 @@ const PeriodToClaim = ({ date, dateSetBack, dateSelected }) => {
   };
   return (
     <div className="" style={{ marginTop: "10px" }}>
-      {" "}
-      <strong>
-        If the client said they made less than $1000 since{" "}
-        {moment(dateSetBack).format("MMMM Do YYYY")}
-      </strong>
-      <div>
-        {dateSelected && (
-          <>
+      {dateSelected && (
+        <>
+          <strong>
+            If the client said they made less than $1000 since{" "}
+            {moment(dateSetBack).format("MMMM Do YYYY")}
+          </strong>
+          <div>
             The client can claim the following periods: <br />{" "}
             {periodElements()}
-          </>
-        )}
-      </div>
+          </div>
+        </>
+      )}
     </div>
   );
 };
