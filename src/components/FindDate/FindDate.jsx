@@ -3,25 +3,31 @@ import { Form } from "react-bootstrap";
 import moment from "moment";
 import PeriodToClaim from "../PeriodToClaim/PeriodToClaim";
 
-const FindDate = () => {
+const FindDate = (props) => {
   const [date, setDate] = useState(new Date());
   const [dateSetBack, setDaysBack] = useState();
 
   const [dateSelected, toggleDateSelected] = useState(false);
   const [firstTimeApplying, toggleFirstTimeApplying] = useState(false);
-  const [checkboxValue, setCheckboxValue] = useState(false);
-  const [radio1, setRadio1] = useState();
-  const [radio2, setRadio2] = useState();
+  const [checkboxActive, activateCheckbox] = useState(true);
 
   useEffect(() => {
     let daysBack = new Date(date.setDate(date.getDate() - 26));
     setDaysBack(daysBack);
   }, []);
+  const resetCheckbox = () => {
+    activateCheckbox(true);
+  };
 
-  const handleChange = (dateValue, firstTime) => {
+  const handleChange = (dateValue) => {
     setDate(dateValue);
-    toggleDateSelected(!dateSelected);
+    toggleDateSelected(true);
+    handleDateChange(dateValue);
+    // set radio default
+    resetCheckbox();
+  };
 
+  const handleDateChange = (dateValue, firstTime) => {
     let dateV = new Date(dateValue);
     let amountOfDays = firstTime ? 14 : 28;
     let firstTimeApplyPeriod = dateV.setDate(
@@ -31,16 +37,8 @@ const FindDate = () => {
   };
 
   const handleCheckbox = (e) => {
-    const { name } = e;
-    if (name === "radio1") {
-      setRadio1("active" ? "" : "active");
-    }
-    if (name === "radio2") {
-      setRadio2("active");
-    }
-    setCheckboxValue(!checkboxValue);
     toggleFirstTimeApplying(!firstTimeApplying);
-    handleChange(date, !firstTimeApplying);
+    handleDateChange(date, !firstTimeApplying);
   };
 
   return (
@@ -61,7 +59,6 @@ const FindDate = () => {
             type="radio"
             label="First time applying"
             name="radio"
-            value={radio1}
             onChange={(e) => handleCheckbox(e.target)}
           />
 
@@ -69,8 +66,7 @@ const FindDate = () => {
             type="radio"
             label="Client has previously applied for CERB"
             name="radio"
-            value={radio2}
-            defaultChecked
+            defaultChecked={true}
             onChange={(e) => handleCheckbox(e.target)}
           />
         </Form.Group>
@@ -88,8 +84,8 @@ const FindDate = () => {
       {date && (
         <PeriodToClaim
           date={date}
+          dateSelected={dateSelected}
           dateSetBack={dateSetBack}
-          firstTimeApplying={firstTimeApplying}
         />
       )}
     </div>
