@@ -12,6 +12,8 @@ const PeriodToClaim = ({ date, dateSetBack, dateSelected }) => {
         !period.title.match(/[12]/) && titles.push(period.title);
       } else if (dateSetBack >= period.start) {
         !period.title.match(/[12]/) && titles.push(period.title);
+      } else if (dateSetBack <= periods[0].start) {
+        titles.push("We do not cover that period at this time");
       }
 
       return titles;
