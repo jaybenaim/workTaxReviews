@@ -12,11 +12,17 @@ const Calendar = () => {
   const onSelectEvent = (e) => {
     console.log(e);
   };
+  const extendPeriodsToCoverLastDay = () => {
+    return myEventsList.map((event, i) => {
+      event.end.setDate(event.end.getDate() + 1);
+      return event;
+    });
+  };
   return (
     <div className="container" style={{ height: "100%", width: "100%" }}>
       <BigCalender
         localizer={localizer}
-        events={myEventsList}
+        events={extendPeriodsToCoverLastDay()}
         startAccessor="start"
         endAccessor="end"
         style={{ height: 500 }}
