@@ -1,0 +1,8 @@
+.clock-panel {
+  position: relative;
+  right: -45%;
+  margin-top: -64%;
+}
+.clock-panel strong {
+  font-size: 1.2em;
+}

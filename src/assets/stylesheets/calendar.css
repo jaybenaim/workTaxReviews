@@ -1,3 +1,6 @@
+#calendar-section {
+  margin: 5% 1%;
+}
 [title="Period 1"] {
   background: red !important;
   border: 2px solid red;

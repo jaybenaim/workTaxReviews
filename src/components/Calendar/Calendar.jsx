@@ -19,7 +19,11 @@ const Calendar = () => {
     });
   };
   return (
-    <div className="container" style={{ height: "100%", width: "100%" }}>
+    <div
+      className="container"
+      style={{ height: "100%", width: "100%" }}
+      id="calendar-section"
+    >
       <BigCalender
         localizer={localizer}
         events={extendPeriodsToCoverLastDay()}

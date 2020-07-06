@@ -5,7 +5,6 @@ import NavBar from "./components/NavBar";
 
 import Home from "./components/Home/Home";
 import Calendar from "./components/Calendar/Calendar";
-import Clock from "./components/Clock/Clock";
 
 //TODO Web Template Studio: Add routes for your new pages here.
 const App = () => {
@@ -15,7 +14,6 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/calendar" component={Calendar} />
-        <Route exact path="/clock" component={Clock} />
       </Switch>
     </React.Fragment>
   );
