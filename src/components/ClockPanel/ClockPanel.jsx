@@ -5,17 +5,18 @@ import "../../assets/stylesheets/clockPanel.css";
 
 const ClockPanel = () => {
   const provinces = [
-    { name: "British Columbia", tz: -3 },
-    { name: "Yukon", tz: -3 },
-    { name: "Alberta", tz: -2 },
-    { name: "North West Territories", tz: -2 },
-    { name: "Saskatchewan", tz: -2 },
-    { name: "Manitoba", tz: -1 },
-    { name: "Newfoundland", tz: 1.5 },
-    { name: "Nova Scotia", tz: 1 },
-    { name: "New Brunswick", tz: 1 },
-    { name: "Prince Edward Island", tz: 1 },
-    { name: "Ontario", tz: 0 },
+    { name: "BC", tz: -3 },
+    { name: "YT", tz: -3 },
+    { name: "AB", tz: -2 },
+    { name: "NT", tz: -2 },
+    { name: "SK", tz: -2 },
+    { name: "MB", tz: -1 },
+    { name: "NL", tz: 1.5 },
+    { name: "NS", tz: 1 },
+    { name: "NB", tz: 1 },
+    { name: "PE", tz: 1 },
+    { name: "QC", tz: 0 },
+    { name: "ON", tz: 0 },
   ];
 
   const clockElements = () => {
@@ -26,9 +27,9 @@ const ClockPanel = () => {
         date.setMinutes(date.getMinutes() + 30);
       }
       return (
-        <>
-          <strong>{province.name}</strong> <Clock key={i} date={date} />{" "}
-        </>
+        <div key={i}>
+          <strong>{province.name}</strong> <Clock date={date} />{" "}
+        </div>
       );
     });
   };

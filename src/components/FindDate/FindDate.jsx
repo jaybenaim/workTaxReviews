@@ -9,22 +9,17 @@ const FindDate = (props) => {
 
   const [dateSelected, toggleDateSelected] = useState(false);
   const [firstTimeApplying, toggleFirstTimeApplying] = useState(false);
-  const [checkboxActive, activateCheckbox] = useState(true);
 
   useEffect(() => {
     let daysBack = new Date(date.setDate(date.getDate() - 26));
     setDaysBack(daysBack);
+    // eslint-disable-next-line
   }, []);
-  const resetCheckbox = () => {
-    activateCheckbox(true);
-  };
 
   const handleChange = (dateValue) => {
     setDate(dateValue);
     toggleDateSelected(true);
     handleDateChange(dateValue);
-    // set radio default
-    resetCheckbox();
   };
 
   const handleDateChange = (dateValue, firstTime) => {
