@@ -74,7 +74,7 @@ const FindDate = (props) => {
 
       <br />
 
-      {dateSetBack && (
+      {dateSelected && (
         <div>
           Ask client: Have you made less than $1000 since{" "}
           {moment(dateSetBack).format("MMMM Do YYYY")}
