@@ -1,0 +1,15 @@
+.clock-container {
+  width: 150px;
+  height: 40px;
+  background: #000;
+  border: 3.5px solid #e3302c;
+  border-radius: 4px;
+  color: #e3302c;
+  font-size: 1.3em;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  -webkit-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75);
+}

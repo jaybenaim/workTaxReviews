@@ -1,6 +1,9 @@
 import React from "react";
-const Clock = () => {
-  return <div className="clock-container"></div>;
+import "../../assets/stylesheets/clock.css";
+import moment from "moment";
+
+const Clock = ({ date: time }) => {
+  return <div className="clock-container">{moment(time).format("LT")}</div>;
 };
 
 export default Clock;
