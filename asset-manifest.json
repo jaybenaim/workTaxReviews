@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/workTaxReviews/static/css/main.5723f7c3.chunk.css",
-    "main.js": "/workTaxReviews/static/js/main.8082875b.chunk.js",
-    "main.js.map": "/workTaxReviews/static/js/main.8082875b.chunk.js.map",
+    "main.css": "/workTaxReviews/static/css/main.225cefa5.chunk.css",
+    "main.js": "/workTaxReviews/static/js/main.4ba4b78d.chunk.js",
+    "main.js.map": "/workTaxReviews/static/js/main.4ba4b78d.chunk.js.map",
     "runtime-main.js": "/workTaxReviews/static/js/runtime-main.d83f61cb.js",
     "runtime-main.js.map": "/workTaxReviews/static/js/runtime-main.d83f61cb.js.map",
     "static/css/2.c7ed56f2.chunk.css": "/workTaxReviews/static/css/2.c7ed56f2.chunk.css",
     "static/js/2.fa29065b.chunk.js": "/workTaxReviews/static/js/2.fa29065b.chunk.js",
     "static/js/2.fa29065b.chunk.js.map": "/workTaxReviews/static/js/2.fa29065b.chunk.js.map",
     "index.html": "/workTaxReviews/index.html",
-    "precache-manifest.756bf244d0fcd75e60276fea8e46b48b.js": "/workTaxReviews/precache-manifest.756bf244d0fcd75e60276fea8e46b48b.js",
+    "precache-manifest.87d1fddf0edd75eb5eea1db21f6302f4.js": "/workTaxReviews/precache-manifest.87d1fddf0edd75eb5eea1db21f6302f4.js",
     "service-worker.js": "/workTaxReviews/service-worker.js",
     "static/css/2.c7ed56f2.chunk.css.map": "/workTaxReviews/static/css/2.c7ed56f2.chunk.css.map",
-    "static/css/main.5723f7c3.chunk.css.map": "/workTaxReviews/static/css/main.5723f7c3.chunk.css.map",
+    "static/css/main.225cefa5.chunk.css.map": "/workTaxReviews/static/css/main.225cefa5.chunk.css.map",
     "static/js/2.fa29065b.chunk.js.LICENSE.txt": "/workTaxReviews/static/js/2.fa29065b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d83f61cb.js",
     "static/css/2.c7ed56f2.chunk.css",
     "static/js/2.fa29065b.chunk.js",
-    "static/css/main.5723f7c3.chunk.css",
-    "static/js/main.8082875b.chunk.js"
+    "static/css/main.225cefa5.chunk.css",
+    "static/js/main.4ba4b78d.chunk.js"
   ]
 }
