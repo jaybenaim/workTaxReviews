@@ -41,4 +41,22 @@ export const myEventsList = [
     title: "Period 7",
     allDay: false,
   },
+  {
+    title: "14 Day Mark",
+    start: new Date(2020, 4, 24),
+    end: new Date(2020, 4, 24),
+    allDay: "true",
+  },
+  {
+    title: "14 Day Mark",
+    start: new Date(2020, 5, 21),
+    end: new Date(2020, 5, 21),
+    allDay: "true",
+  },
+  {
+    title: "14 Day Mark",
+    start: new Date(2020, 6, 19),
+    end: new Date(2020, 6, 19),
+    allDay: "true",
+  },
 ];
