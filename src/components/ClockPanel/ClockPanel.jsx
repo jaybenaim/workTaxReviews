@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Clock from "../Clock/Clock";
 
 import "../../assets/stylesheets/clockPanel.css";
@@ -18,11 +18,16 @@ const ClockPanel = () => {
     { name: "PE", tz: 1 },
     { name: "QC", tz: 0 },
   ];
-
+  const [date, setDate] = useState(new Date());
+  // useEffect(() => {
+  //   setInterval(() => {
+  //     setDate(new Date());
+  //   }, 10000);
+  // });
   const clockElements = () => {
     return provinces.map((province, i) => {
-      let date = new Date();
-      date.setHours(date.getHours() + province.tz);
+      let newDate = new Date(date);
+      newDate.setHours(date.getHours() + province.tz);
       if (province.name === "Newfoundland") {
         date.setMinutes(date.getMinutes() + 30);
       }

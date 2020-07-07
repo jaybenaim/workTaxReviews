@@ -13,7 +13,31 @@ const Calendar = () => {
     console.log(e);
   };
   const extendPeriodsToCoverLastDay = () => {
-    return myEventsList.map((event, i) => {
+    let fourteenDayMark = [
+      {
+        title: "14 Day Mark",
+        start: new Date(2020, 4, 24),
+        end: new Date(2020, 4, 24),
+        allDay: "true",
+      },
+      {
+        title: "14 Day Mark",
+        start: new Date(2020, 5, 21),
+        end: new Date(2020, 5, 21),
+        allDay: "true",
+      },
+      {
+        title: "14 Day Mark",
+        start: new Date(2020, 6, 19),
+        end: new Date(2020, 6, 19),
+        allDay: "true",
+      },
+    ];
+    let newEventsList = myEventsList;
+    newEventsList.push(...fourteenDayMark);
+    return newEventsList.map((event, i) => {
+      event.start = new Date(event.start);
+      event.end = new Date(event.end);
       event.end.setDate(event.end.getDate() + 1);
       return event;
     });

@@ -31,6 +31,10 @@
   background: #3174ad !important;
   border: 2px solid #3174ad;
 }
+[title="14 Day Mark"] {
+  background: #00e0fd !important;
+  border: 2px solid #00e0fd;
+}
 .rbc-event {
   background: none;
   padding: 0;
@@ -42,4 +46,7 @@
 /* Month Label */
 .rbc-toolbar-label {
   font-size: 3em;
+}
+.rbc-month-row {
+  min-height: 91px;
 }

@@ -37,7 +37,10 @@ const FindDate = (props) => {
   };
 
   return (
-    <div className="find-date-section" style={{ padding: "4%" }}>
+    <div
+      className="find-date-section"
+      style={{ padding: "4%", marginTop: "5%" }}
+    >
       <div>Enter the date the client last worked</div>
       {/* Checkbox for 1st time that will change 14 to 28 days */}
       <Form>
