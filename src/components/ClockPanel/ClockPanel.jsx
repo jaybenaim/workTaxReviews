@@ -5,6 +5,7 @@ import "../../assets/stylesheets/clockPanel.css";
 
 const ClockPanel = () => {
   const provinces = [
+    { name: "ON", tz: 0 },
     { name: "BC", tz: -3 },
     { name: "YT", tz: -3 },
     { name: "AB", tz: -2 },
@@ -16,7 +17,6 @@ const ClockPanel = () => {
     { name: "NB", tz: 1 },
     { name: "PE", tz: 1 },
     { name: "QC", tz: 0 },
-    { name: "ON", tz: 0 },
   ];
 
   const clockElements = () => {
@@ -33,7 +33,12 @@ const ClockPanel = () => {
       );
     });
   };
-  return <div className="clock-panel">{clockElements()}</div>;
+  return (
+    <div className="clock-panel">
+      <div className="timezone-heading">Time Zones</div>
+      {clockElements()}
+    </div>
+  );
 };
 
 export default ClockPanel;

@@ -32,3 +32,8 @@
   margin: 5%;
   margin-bottom: 8%;
 }
+@media (max-width: 480px) {
+  .clock-container {
+    margin: 0;
+  }
+}

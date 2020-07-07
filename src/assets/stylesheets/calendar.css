@@ -1,6 +1,11 @@
 #calendar-section {
   margin: 5% 18% 5% 0;
 }
+@media (max-width: 480px) {
+  #calendar-section {
+    margin: 0;
+  }
+}
 [title="Period 1"] {
   background: red !important;
   border: 2px solid red;

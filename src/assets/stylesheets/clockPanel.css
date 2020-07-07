@@ -6,3 +6,22 @@
 .clock-panel strong {
   font-size: 1.2em;
 }
+@media (min-width: 481px) {
+  .timezone-heading {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .timezone-heading {
+    color: #000;
+    font-size: 3em;
+    text-align: center;
+  }
+  .clock-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2%;
+    position: static;
+    margin: 0 -21px 4% 5%;
+  }
+}

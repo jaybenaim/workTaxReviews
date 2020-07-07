@@ -10,7 +10,7 @@ const DisplayPeriods = () => {
     periods.map((period, i) => {
       const { start, end, title } = period;
       return (
-        <div className="period-item">
+        <div className="period-item" key={i}>
           {title}
           <p>
             {moment(start).format("MMM Do ")}-{moment(end).format("MMM Do ")}
@@ -24,7 +24,7 @@ const DisplayPeriods = () => {
         variant="outline-secondary"
         onClick={() => togglePeriods(!showPeriods)}
       >
-        Show All Periods{" "}
+        {!showPeriods ? "Show" : "Hide"} All Periods{" "}
       </Button>
       {showPeriods && periodElements()}
     </section>
