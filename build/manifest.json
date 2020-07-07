@@ -1,6 +1,6 @@
 ﻿{
-  "short_name": "react_starter_template",
-  "name": "react_starter_template created with Microsoft Web Template Studio",
+  "short_name": "CERB Tax Review Helper",
+  "name": "CERB Tax Review Helper",
   "icons": [
     {
       "src": "favicon.ico",
@@ -9,7 +9,7 @@
     }
   ],
   "start_url": ".",
-  "display": "standalone",
+  "display": "minimal-ui",
   "theme_color": "#000000",
   "background_color": "#ffffff"
 }
