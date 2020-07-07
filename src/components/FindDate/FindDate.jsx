@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Form } from "react-bootstrap";
 import moment from "moment";
 import PeriodToClaim from "../PeriodToClaim/PeriodToClaim";
+import "../../assets/stylesheets/findDate.css";
 
-const FindDate = (props) => {
+const FindDate = () => {
   const [date, setDate] = useState(new Date());
   const [dateSetBack, setDaysBack] = useState();
 
